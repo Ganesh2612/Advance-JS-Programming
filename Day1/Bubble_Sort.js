@@ -9,4 +9,4 @@ for(let i=0;i<arr.length;i++){
     }
     if(!isSwapped) break;
 }
-console.log(...arr);
+console.log(arr);
