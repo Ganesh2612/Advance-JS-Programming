@@ -1,6 +1,6 @@
 function Selection_sort(arr){
     let n=arr.length;
-     for(let i=0;i<n-1;i++){
+     for(let i=0;i<n;i++){
         let mid_indx=i;
         for(let j=i+1;j<n;j++){
             if(arr[mid_indx]>arr[j]){
