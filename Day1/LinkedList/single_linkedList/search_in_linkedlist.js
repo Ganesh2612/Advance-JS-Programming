@@ -29,27 +29,24 @@ class LinkedList{
         res+=null;
         console.log(res);
      }
-     delete(value){
-        if(!this.head){
-            console.log("It is an empty list");
-            return;
+   
+     search(value){
+        if(this.head.value==value){
+            console.log("value is found");
+            return 1;
         }
-        if(this.head.value===value){
-            this.head=this.head.next;
-            return;
-        }
-        let prev=null;
         let curr=this.head;
-        while(curr && curr.value!==value){
-            prev=curr;
+        while(curr){
+            if(curr.value==value){
+                console.log("value is found");
+                return 1;
+            }
             curr=curr.next;
         }
-         if(!curr){
-            console.log("Element is not in the list");
-            return;
-         }
-         prev.next=curr.next;
+        console.log("value is not found");
+        return -1;
      }
+     
 }
 let list=new LinkedList();
 list.append(67);
@@ -57,5 +54,6 @@ list.append(99);
 list.append(34);
 list.append(54);
 list.PrintList();
-list.delete(99);
+
 list.PrintList();
+list.search(54);
