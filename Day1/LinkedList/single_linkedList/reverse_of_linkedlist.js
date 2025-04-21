@@ -30,18 +30,26 @@ class LinkedList{
         console.log(res);
      }
      reverse(){
-         let st=[];
-         let curr=this.head;
-         while(curr){
-             st.push(curr.value);
-             curr=curr.next;
-         }
-         let curr2=this.head;
-         while(curr2){
-             curr2.value=st.pop();
-             curr2=curr2.next;
-         }
-         
+        //  let st=[];
+        //  let curr=this.head;
+        //  while(curr){
+        //      st.push(curr.value);
+        //      curr=curr.next;
+        //  }
+        //  let curr2=this.head;
+        //  while(curr2){
+        //      curr2.value=st.pop();
+        //      curr2=curr2.next;
+        //  }
+          
+        let prev=null,curr=this.head;
+        while(curr){
+            let next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+        this.head=prev;
      }
      
 }
