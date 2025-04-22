@@ -1,7 +1,7 @@
 function balanced_Paranthesis(str){
     let st=[];
     for(let i=0;i<str.length;i++){
-        if(str[i]=="[" || str[i]=="{" || str[i]=="("){
+        if(str[i]==="[" || str[i]==="{" || str[i]==="("){
                st.push(str[i]);
         }
         else{
