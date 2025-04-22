@@ -67,7 +67,7 @@ class DoublyLinkedList{
         }
         let res="", curr=this.head;
         while(curr){
-            res+=curr.value+"->";
+            res+=curr.value+"<->";
             curr=curr.next;
         }
         res+=null;
