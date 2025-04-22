@@ -15,8 +15,7 @@ function balanced_Paranthesis(str){
             else{
                 return false;
             }
-            
-        }
+            }
     }
     return st.length===0;
 }
