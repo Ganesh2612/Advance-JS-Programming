@@ -24,5 +24,4 @@ root.left.right=new TreeNode(4);
 root.left.left=new TreeNode(5);
 root.right.left=new TreeNode(6);
 
-let tree=new preOrder(root);
-console.log(tree);
+ preOrder(root);
